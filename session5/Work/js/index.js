@@ -33,14 +33,10 @@ function init() {
       if (x == -5 & y == -5){
         var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
         var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-        mesh.rotation.x = 360*Math.random();
-        mesh.rotation.y = 360*Math.random();
       }
        else if (x ==5 & y == 5){
         var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
         var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
-        mesh.rotation.x = 360*Math.random();
-        mesh.rotation.y = 360*Math.random();
       }
       else{
       var boxMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});

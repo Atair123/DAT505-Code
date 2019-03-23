@@ -21,8 +21,8 @@ function init() {
   //renderer.shadowMapEnabled = true;
 
   //Create a two dimensional grid of objects, and position them accordingly
-  for (var x = -45; x <= 50; x += 5) { // Start from -45 and sequentially add one every 5 pixels
-  for (var y = -30; y <= 30; y += 5) { // Start from -45 and sequentially add one every 5 pixels
+  for (var x = -40; x <= 40; x += 5) { // Start from -45 and sequentially add one every 5 pixels
+  for (var y = -40; y <= 40; y += 5) { // Start from -45 and sequentially add one every 5 pixels
     //for (var y = -30; y <= 30; y += 5) {
       var boxGeometry = new THREE.BoxGeometry(3, 6, 3);
       //The color of the material is assigned a random color
@@ -34,6 +34,8 @@ function init() {
       mesh1.position.y = y;
       mesh1.position.z = 0;
       mesh1.scale.y = 0.5;
+      mesh1.rotation.x = 360*Math.random();
+      mesh1.rotation.y = 360*Math.random();
 
       scene.add(mesh1);
   }
