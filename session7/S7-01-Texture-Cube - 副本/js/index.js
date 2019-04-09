@@ -1,7 +1,7 @@
 //Setup the global variables
 var camera, scene, renderer, geometry, material, mesh;
 var texture;
-var cubesNum = 10;
+var cubesNum = 500;
 
 var cubes = [];
 var speed = [];
@@ -12,14 +12,14 @@ function init() {
 
 	// Create a geometry
 	// 	Create a box (cube) of 10 width, length, and height
-	geometry = new THREE.BoxGeometry( 10, 10, 10 );
+	geometry = new THREE.CubeGeometry( 0.2, 12, 0.1 );
 
 	for(let i=0; i<cubesNum; i++){
-		var randomValue = Math.random() * 0.5;
+		var randomValue = Math.random() * 5;
 		speed.push(randomValue);
 
 		//Generate a random number from 1 to 4(according to image files)
-		var randomSelection = Math.round(Math.random()*4) + 1;
+		var randomSelection = Math.round(Math.random()*2) + 1;
 		// Load a texture
 		texture = new THREE.TextureLoader().load( "textures/texture" + randomSelection+".jpg");
 
@@ -62,9 +62,9 @@ function animate() {
 	for(var i=0; i<cubesNum; i++){
 
 		// Rotate the x position of the mesh by 0.03
-		cubes[i].rotation.x += speed[i] / 100;
+		//cubes[i].rotation.x += speed[i] / 100;
 		// Rotate the y position of the mesh by 0.02
-		cubes[i].rotation.y += speed[i] / 80;
+		//cubes[i].rotation.y += speed[i] / 80;
 
 
 
@@ -75,7 +75,7 @@ function animate() {
 		//make it appear on the top. Also x position is randomized
 		if (cubes[i].position.y <- 30){
 			cubes[i].position.y = 35;
-			cubes[i].position.x = (Math.random()*-20) +10;
+			cubes[i].position.x = (Math.random()*-100) +50;
 			cubes[i].scale.x = Math.random();
 			cubes[i].scale.y = Math.random();
 			cubes[i].scale.z = Math.random();
