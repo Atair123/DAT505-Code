@@ -1,10 +1,14 @@
 var renderer, scene, camera;
+var cubes = [];
+var randomRotationX = [];
+var randomRotationY = [];
+
 
 function init() {
   scene = new THREE.Scene();
 
   var W = window.innerWidth,
-      H = window.innerHeight;
+  H = window.innerHeight;
 
   camera = new THREE.PerspectiveCamera(45, W / H, .1, 1000);
   camera.position.set(0, 55, 85);
@@ -13,13 +17,6 @@ function init() {
   var spotLight = new THREE.SpotLight(0xFFFFFF);
   spotLight.position.set(0, 1000, 0);
   scene.add(spotLight);
-
-  var ambLight = new THREE.AmbientLight(0xffffff);
-  ambLight.position.set(0, 1000, 0);
-  ambLight.add(spotLight);
-
-  scene.add(ambLight);
-  scene.add(ambLight);
   //spotLight.castShadow = true;
 
   renderer = new THREE.WebGLRenderer({antialias:true});
@@ -27,32 +24,45 @@ function init() {
   renderer.setSize(W, H);
   //renderer.shadowMapEnabled = true;
 
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+
   //Create a two dimensional grid of objects, and position them accordingly
-  for (var x = -40; x <= 40; x += 5) { // Start from -45 and sequentially add one every 5 pixels
-  for (var y = -40; y <= 40; y += 5) { // Start from -45 and sequentially add one every 5 pixels
-    //for (var y = -30; y <= 30; y += 5) {
-      var boxGeometry = new THREE.BoxGeometry(3, 6, 3);
+  for (var x = -35; x < 40; x += 5) { // Start from -35 and sequentially add one every 5 pixels
+    for (var y = -35; y < 40; y += 5) {
+      var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
       //The color of the material is assigned a random color
       var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
-      var mesh1 = new THREE.Mesh(boxGeometry, boxMaterial);
+      var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
       //mesh.castShadow = true;
 
-      mesh1.position.x = x;
-      mesh1.position.y = y;
-      mesh1.position.z = 0;
-      mesh1.scale.y = 0.5;
-      mesh1.rotation.x = 360*Math.random();
-      mesh1.rotation.y = 360*Math.random();
+      mesh.position.x = x;
+      mesh.position.z = y;
+      mesh.rotation.x += 360*Math.random();
+      var randomValueX = (Math.random()*0.1) - 0.05;
+      var randomValueY = (Math.random()*0.1) - 0.05;
+      randomRotationX.push(randomValueX);
+      randomRotationY.push(randomValueY);
 
-      scene.add(mesh1);
+
+
+      scene.add(mesh);
+      cubes.push(mesh);
+    }
   }
-}
 
   document.body.appendChild(renderer.domElement);
 }
 
 function drawFrame(){
   requestAnimationFrame(drawFrame);
+  //rot += 0.01;
+  //forEach takes all the array entries and passes the c as the object, and i as the index
+  cubes.forEach(function(c, i) {
+    c.rotation.x += randomRotationX[i]; //Rotate the object that is referenced in c
+    c.rotation.y += randomRotationY[i];
+  });
+
   renderer.render(scene, camera);
 }
 
