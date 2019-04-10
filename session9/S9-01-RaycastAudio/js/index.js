@@ -37,24 +37,24 @@ function init() {
 
   var geometry = new THREE.BoxBufferGeometry( 20, 20, 20 );
 
-  for (var i=0; i<30; i++){
+  for (var i=0; i<100; i++){
   // Model/material loading!
 	var mtlLoader = new THREE.MTLLoader();
-	mtlLoader.load("sword.mtl", function(materials){
+	mtlLoader.load("XX.mtl", function(materials){
 
 		materials.preload();
 
     var objLoader = new THREE.OBJLoader();
 		objLoader.setMaterials(materials);
 
-  		objLoader.load("sword.obj", function(mesh){
+  		objLoader.load("XX.obj", function(mesh){
   			mesh.traverse(function(node){
   				if( node instanceof THREE.Mesh ){
   					node.castShadow = true;
   					node.receiveShadow = true;
   				}
   			});
-        var sizeRand = Math.random() * 0.2;
+        var sizeRand = Math.random() * 2;
         mesh.scale.set(sizeRand,sizeRand,sizeRand);
         mesh.position.set(Math.random()*800-400, Math.random()*800-400, Math.random()*800-400);
         mesh.rotation.y = -Math.PI/Math.random()*4;
@@ -120,7 +120,7 @@ function render() {
       INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
       INTERSECTED.material.emissive.setHex( 0xff0000 );
 
-      audioLoader.load( 'audio/Diploship-Fly.wav', function( buffer ) {
+      audioLoader.load( 'audio/YES.mp3', function( buffer ) {
         sound.setBuffer( buffer );
         sound.setLoop( false );
         sound.setVolume( 0.5 );
