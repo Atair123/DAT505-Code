@@ -146,7 +146,8 @@
   var mesh29 = new THREE.Mesh( geometry, material1 );
   mesh29.position.z = 200;
   mesh29.position.x = -100;
-  mesh29.position.y = 100;```
+  mesh29.position.y = 100;
+  ```
 
   * Create some more more more more more cubes, because of the limitation of the technology, i can just use this way. And set the `position` and `size`.
 
@@ -206,7 +207,8 @@
   newgroup.add(torus1);
   newgroup.add(torus2);
   newgroup.add(torus3);
-  scene.add( newgroup );```
+  scene.add( newgroup );
+  ```
 
   * Create a group containing all the cubes .Set the position and add the group.
 
@@ -307,7 +309,8 @@
 
     torus2.rotation.y = rot;//Continuously rotate the mesh
 
-    torus3.rotation.z = rot;//Continuously rotate the mesh```
+    torus3.rotation.z = rot;//Continuously rotate the mesh
+    ```
 
   * Set the `speed of rotation` and let all of them rotate.
   * Maybe there is an easier way to achieve the same effect, but at that moment I also enjoy the process.
