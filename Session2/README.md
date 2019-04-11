@@ -1,4 +1,4 @@
-# DAT505-Code Session #
+# DAT505-Code Session2 #
 
 * In the session2, we learned the testure and loading the texture in the profile, i prepare four texture and try to put them onto the cube I creative.
 
@@ -20,16 +20,19 @@
  scene.add(light1);
 
  var light2 = new THREE.PointLight(0xffffff, 0.5);
- scene.add(light2);```
+ scene.add(light2);
+ ```
 
   * The Base Settings，like the `renderer`, `camera`, `light`.
 
  ```javascript
- var geometry = new THREE.BoxGeometry(100, 100, 100);```
+ var geometry = new THREE.BoxGeometry(100, 100, 100);
+ ```
 
   * Create a Cube with basic material.
 
   ```javascript
+
   var texture1=new THREE.TextureLoader().load("texture/wood.jpg");
 
   var material1=new THREE.MeshBasicMaterial({map:texture1});
@@ -44,7 +47,8 @@
 
   var texture4=new THREE.TextureLoader().load("texture/stone.jpg");
 
-  var material4=new THREE.MeshBasicMaterial({map:texture4});```
+  var material4=new THREE.MeshBasicMaterial({map:texture4});
+  ```
 
   * Var the texture and load the picture I saved in the profile `texture`.
 
@@ -108,7 +112,8 @@
   var mesh12 = new THREE.Mesh( geometry, material1 );
   mesh12.position.z = -1000;
   mesh12.position.x = 100;
-  mesh12.position.y = -200;```
+  mesh12.position.y = -200;
+  ```
 
   * Define the `position` and load the texture.
 
@@ -124,14 +129,14 @@
   scene.add( mesh9 );
   scene.add( mesh10 );
   scene.add( mesh11 );
-  scene.add( mesh12 );```
+  scene.add( mesh12 );
+  ```
 
   *  Add mesh to scene.
 
   ```javascript
   var rot = 0;
 
-  // Render Loop
   var render = function () {
     requestAnimationFrame( render );
 
@@ -171,6 +176,7 @@
     mesh11.rotation.y = rot;
 
     mesh12.rotation.x = rot;
-    mesh12.rotation.y = rot;```
+    mesh12.rotation.y = rot;
+    ```
 
-* Make them `rotate` ,var a Initial value should make the code cleaner.
+ * Make them `rotate` ,var a Initial value should make the code cleaner.
