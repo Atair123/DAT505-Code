@@ -168,7 +168,8 @@
   var material4 = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
   var torus3 = new THREE.Mesh( geometry3, material1 );
   torus3.position.z = 100;
-  scene.add( torus3 );```
+  scene.add( torus3 );
+  ```
 
   * Create the `torus` surrounding the cubes. Set the colour, position, material. And add the torus on the scene.
 
@@ -215,101 +216,131 @@
   ```javascript
   var rot = 0;
 
-  // Render Loop
   var render = function () {
     requestAnimationFrame( render );
 
     rot += 0.01;
 
-    mesh1.rotation.x = rot; //Continuously rotate the mesh
+    mesh1.rotation.x = rot;
+
     mesh1.rotation.y = rot;
 
-    mesh2.rotation.x = rot; //Continuously rotate the mesh
+    mesh2.rotation.x = rot;
+
     mesh2.rotation.y = rot;
 
-    mesh3.rotation.x = rot; //Continuously rotate the mesh
+    mesh3.rotation.x = rot;
+
     mesh3.rotation.y = rot;
 
-    mesh4.rotation.x = rot; //Continuously rotate the mesh
+    mesh4.rotation.x = rot;
+
     mesh4.rotation.y = rot;
 
-    mesh5.rotation.x = rot; //Continuously rotate the mesh
+    mesh5.rotation.x = rot;
+
     mesh5.rotation.y = rot;
 
-    mesh6.rotation.x = rot; //Continuously rotate the mesh
+    mesh6.rotation.x = rot;
+
     mesh6.rotation.y = rot;
 
-    mesh7.rotation.x = rot; //Continuously rotate the mesh
+    mesh7.rotation.x = rot;
+
     mesh7.rotation.y = rot;
 
-    mesh8.rotation.x = rot; //Continuously rotate the mesh
+    mesh8.rotation.x = rot;
+
     mesh8.rotation.y = rot;
 
-    mesh9.rotation.x = rot; //Continuously rotate the mesh
+    mesh9.rotation.x = rot;
+
     mesh9.rotation.y = rot;
 
-    mesh11.rotation.x = rot; //Continuously rotate the mesh
+    mesh11.rotation.x = rot;
+
     mesh11.rotation.y = rot;
 
-    mesh12.rotation.x = rot; //Continuously rotate the mesh
+    mesh12.rotation.x = rot;
+
     mesh12.rotation.y = rot;
 
-    mesh13.rotation.x = rot; //Continuously rotate the mesh
+    mesh13.rotation.x = rot;
+
     mesh13.rotation.y = rot;
 
-    mesh14.rotation.x = rot; //Continuously rotate the mesh
+    mesh14.rotation.x = rot;
+
     mesh14.rotation.y = rot;
 
-    mesh15.rotation.x = rot; //Continuously rotate the mesh
+    mesh15.rotation.x = rot;
+
     mesh15.rotation.y = rot;
 
-    mesh16.rotation.x = rot; //Continuously rotate the mesh
+    mesh16.rotation.x = rot;
+
     mesh16.rotation.y = rot;
 
-    mesh17.rotation.x = rot; //Continuously rotate the mesh
+    mesh17.rotation.x = rot;
+
     mesh17.rotation.y = rot;
 
-    mesh18.rotation.x = rot; //Continuously rotate the mesh
+    mesh18.rotation.x = rot;
+
     mesh18.rotation.y = rot;
 
-    mesh19.rotation.x = rot; //Continuously rotate the mesh
+    mesh19.rotation.x = rot;
+
     mesh19.rotation.y = rot;
 
-    mesh21.rotation.x = rot; //Continuously rotate the mesh
+    mesh21.rotation.x = rot;
+
     mesh21.rotation.y = rot;
 
-    mesh22.rotation.x = rot; //Continuously rotate the mesh
+    mesh22.rotation.x = rot;
+
     mesh22.rotation.y = rot;
 
-    mesh23.rotation.x = rot; //Continuously rotate the mesh
+    mesh23.rotation.x = rot;
+
     mesh23.rotation.y = rot;
 
-    mesh24.rotation.x = rot; //Continuously rotate the mesh
+    mesh24.rotation.x = rot;
+
     mesh24.rotation.y = rot;
 
-    mesh25.rotation.x = rot; //Continuously rotate the mesh
+    mesh25.rotation.x = rot;
+
     mesh25.rotation.y = rot;
 
-    mesh26.rotation.x = rot; //Continuously rotate the mesh
+    mesh26.rotation.x = rot;
+
     mesh26.rotation.y = rot;
 
-    mesh27.rotation.x = rot; //Continuously rotate the mesh
+    mesh27.rotation.x = rot;
+
     mesh27.rotation.y = rot;
 
-    mesh28.rotation.x = rot; //Continuously rotate the mesh
+    mesh28.rotation.x = rot;
+
     mesh28.rotation.y = rot;
 
-    mesh29.rotation.x = rot; //Continuously rotate the mesh
+    mesh29.rotation.x = rot;
+
     mesh29.rotation.y = rot;
 
-    newgroup.rotation.x = rot;//Continuously rotate the mesh
+    newgroup.rotation.x = rot;
+
     newgroup.rotation.y = rot;
 
-    torus1.rotation.x = rot;//Continuously rotate the mesh
+    torus1.rotation.x = rot;
 
-    torus2.rotation.y = rot;//Continuously rotate the mesh
+    torus2.rotation.y = rot;
 
-    torus3.rotation.z = rot;//Continuously rotate the mesh```
+    torus3.rotation.z = rot;
+    ```
 
-* Set the `speed of rotation` and let all of them rotate.
-* Maybe there is an easier way to achieve the same effect, but at that moment I also enjoy the process.
+    ```
+ * Set the `speed of rotation` and let all of them rotate.
+
+ * Maybe there is an easier way to achieve the same effect, but at that moment I also enjoy the process.
