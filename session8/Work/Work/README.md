@@ -157,4 +157,4 @@ return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 ```
 
-* wadawd
+* This code is to limit the range of the eyes to make sure that the eyes will appear on the screen
