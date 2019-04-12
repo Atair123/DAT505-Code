@@ -76,4 +76,70 @@ mtlLoader.load("XX.mtl", function(materials){
 }
 ```
 
-* This code can allow me to load my own models, but it can just distinguish the format `obj and mtl`
+* This code can allow me to load my own models, but it can just distinguish the format `obj and mtl`.
+
+```javascript
+raycaster = new THREE.Raycaster();
+
+renderer = new THREE.WebGLRenderer();
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+container.appendChild( renderer.domElement );
+
+//stats = new Stats();
+//container.appendChild( stats.dom );
+document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+window.addEventListener( 'resize', onWindowResize, false );
+}
+
+function onWindowResize() {
+camera.aspect = window.innerWidth / window.innerHeight;
+camera.updateProjectionMatrix();
+renderer.setSize( window.innerWidth, window.innerHeight );
+}
+
+function onDocumentMouseMove( event ) {
+event.preventDefault();
+mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+}
+```
+* This code defines the mouse.
+
+```javascript
+function render() {
+  theta += 0.1;
+  camera.position.x = radius * Math.sin( THREE.Math.degToRad( theta ) );
+  camera.position.y = radius * Math.sin( THREE.Math.degToRad( theta ) );
+  camera.position.z = radius * Math.cos( THREE.Math.degToRad( theta ) );
+  camera.lookAt( scene.position );
+  camera.updateMatrixWorld();
+}
+```
+
+* This code can make the camera auto rotate.
+
+```javascript
+if ( intersects.length > 0 ) {
+  if ( INTERSECTED != intersects[ 0 ].object ) {
+    if ( INTERSECTED ) INTERSECTED.material.emissive.setHex( INTERSECTED.currentHex );
+    INTERSECTED = intersects[ 0 ].object;
+    INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
+    INTERSECTED.material.emissive.setHex( 0xff0000 );
+  }
+}
+  ```
+
+  * This code define the ray, if the ray goes through the object, the object will turn red(0xff0000).
+
+  ```javascript
+  audioLoader.load( 'audio/YES.mp3', function( buffer ) {
+    sound.setBuffer( buffer );
+    sound.setLoop( false );
+    sound.setVolume( 0.5 );
+    sound.play();
+  });
+}
+  ```
+
+* This code can allow me to load the sound when the ray goes through the object.  
