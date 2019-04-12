@@ -1,4 +1,8 @@
-// GLOBALS ======================================================
+# DAT505-Code session6 #
+
+* In yhis session I need to create a map that I can explore it in First person perspective.
+
+```javascript
 var camera, scene, renderer, controls, clock;
 var INV_MAX_FPS = 1 / 100, frameDelta = 0;
 
@@ -44,7 +48,11 @@ function setupThreeJS() {
   controls.movementSpeed = 100;
   controls.lookSpeed = 0.1;
 }
+```
 
+* Some base Settings, `renderer`, `camera`, `FPS`.
+
+```javascript
 function setupWorld() {
   //Create the geometry for the floor
   var geo = new THREE.PlaneGeometry(2000, 2000, 40, 40);
@@ -78,36 +86,27 @@ function setupWorld() {
 
   //Mesh of the city
   var city = new THREE.Mesh(cityGeometry, material);
+}
+  ```
 
-  //Cast shadows of the models
-  //city.castShadow = true;
-  //city.receiveShadow = true;
-  scene.add(city);
+  * This code is the main code that can generate a random map, and define the `shape, texture, colour`.
 
-  //Create the lighting system and add to the scene
-
+  ```javascript
   var light = new THREE.DirectionalLight(0xf9f1c2, 1);
   light.position.set(500, 1500, 1000);
   light.castShadow = true;
+  ```
 
-  var d = 1000;
+  * Define the position of `light`
 
-  scene.add(light);
-}
-
-// DRAW =========================================================
-function draw() {
-  renderer.render( scene, camera );
-}
-
-// UPDATE =======================================================
-function update(delta) {
-  controls.update(delta);
-  if(controls.object.position.y < floor.position.y + 10){
-      controls.object.position.y = 10;
+  ```javascript
+  function update(delta) {
+    controls.update(delta);
+    if(controls.object.position.y < floor.position.y + 10){
+        controls.object.position.y = 10;
+    }
+    //console.log(controls);
   }
-  //console.log(controls);
-}
+  ```
 
-// RUN ==========================================================
-setup();
+*  this code is to `update the position and the map`.

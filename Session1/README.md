@@ -28,6 +28,7 @@ geometry4 = new THREE.CubeGeometry(25, 200, 25);
 material4 = new THREE.MeshBasicMaterial( { color: "#FFCC66" } );
 mesh4 = new THREE.Mesh( geometry4, material4 );
 mesh4.position.z = -1000;
+}
 ```
 
   * Create four cubes, and define their size colour position.

@@ -177,6 +177,7 @@
 
     mesh12.rotation.x = rot;
     mesh12.rotation.y = rot;
+  }
   ```
 
  * Make them `rotate` ,var a Initial value should make the code cleaner.

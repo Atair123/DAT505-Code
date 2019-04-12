@@ -338,6 +338,7 @@
     torus2.rotation.y = rot;
 
     torus3.rotation.z = rot;
+  }
   ```
 
  * Set the `speed of rotation` and let all of them rotate.###

@@ -1,4 +1,4 @@
-# DAT505-Code session4
+# DAT505-Code session4 #
 
 
 * In this session, we need to create 25 cubes and make two different， like the colour, the rotation. The else of them should be stopped, only the two cubes we choose can move. It is a challenge that i need to contact new code.
@@ -45,6 +45,7 @@ function init() {
   //renderer.shadowMapEnabled = true;
 
   controls = new THREE.OrbitControls(camera, renderer.domElement);
+}
   ```
 
   * This are some fundemental settings, camera, renderer, the differents is that i use anther two kinds of lights.
@@ -67,6 +68,8 @@ function init() {
 
   }
   var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
+  }
+}
   ```
 
   * This is a very important piece of code. With this i can choose that two cubes, the first is when X=5 and Y=5, and the next is when X=-5 and Y=-5, the colour of them can be `random`, in the other situation, the colour should be `0x6c6c6c`.
@@ -90,6 +93,7 @@ function init() {
   //mesh.scale.y = 0.5;
   scene.add(mesh);
   cubes.push(mesh);
+}
   ```
   * This code is to push a random speed of rotation onto the two cube I chose, the range is from -0.05 to 0.05.
 
@@ -106,5 +110,6 @@ function init() {
     cubes[6].rotation.x  +=  randomSpeedX[6];
     cubes[18].rotation.x +=  randomSpeedX[18];
   }
+}
   ```
-  * 
+  * 6 and 18 is to locate the cubes I want to let them rotate
