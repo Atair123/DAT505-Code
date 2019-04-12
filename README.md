@@ -1,3 +1,3 @@
-# DAT505-Code session8
+# DAT505-Code
 
 *
