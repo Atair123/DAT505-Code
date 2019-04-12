@@ -2,6 +2,8 @@
 
 * In this session, Ineed to generate the 3d model randomly on the screen, the model should be loaded by myself, and sound effects are emitted when the mouse moves to model.
 
+### Usage ###
+
 ```javascript
 var container, stats;
 var camera, scene, raycaster, renderer;

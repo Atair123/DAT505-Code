@@ -2,6 +2,8 @@
 
 * In this session, I need to create some eyes, these eyes are randomly generated and will look in the direction of the mouse, following the mouse movement.
 
+### Usage ###
+
 ```javascript
 var camera, scene, renderer, mesh;
 var image;
@@ -155,4 +157,4 @@ return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 ```
 
-* 
+*

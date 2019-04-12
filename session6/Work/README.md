@@ -2,6 +2,8 @@
 
 * In yhis session I need to create a map that I can explore it in First person perspective.
 
+### Usage ###
+
 ```javascript
 var camera, scene, renderer, controls, clock;
 var INV_MAX_FPS = 1 / 100, frameDelta = 0;

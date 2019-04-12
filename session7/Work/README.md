@@ -2,6 +2,9 @@
 
 * In this session, I need to Create the cubes that drop randomly from the top of the screen, and make sure that each cube can have a random material.
 
+### Usage ###
+
+
 ```javascript
 var camera, scene, renderer, geometry, material, mesh;
 var texture;
