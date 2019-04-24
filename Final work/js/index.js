@@ -138,9 +138,9 @@ function init() {
 	var f1 = gui.addFolder('Scale');
 	f1.add(controller1,'scale', 0.8,2).onChange( function(){
 		object.scale = (controller1.scale);
-	});
+	});*/
 
-};*/
+};
 
 
 function animate() {
@@ -181,6 +181,7 @@ function swap_music() {
 		oAudio.pause();
 	}
 }
+
 
 init();
 animate();
