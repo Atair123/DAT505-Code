@@ -1,10 +1,15 @@
 # DAT505-Code Final Work
 
+* B161006104 Runtao Yuan
+
 * In the final work, I decide to use the knowledge I learned,including  OrbitControl, model loading, music loading, GUI, random drop and generation, texture loading.
 
 * So I finally create a scene of raining randomly with a sound of raining and a BGM, so you can enjoy the music when open my final work. The camera ca move to the place you like. A skybox is also necessary.
 
+
+* My Github Link : https://github.com/Atair123/DAT505-Code
 ### USAGE ###
+
 ```javascript
 var camera, scene, renderer, geometry, material, mesh1;
 var texture;
